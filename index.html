@@ -1,274 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Gillian Elizabeth Young</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Gillian Elizabeth Young</title>
+
+  <style>
+    :root {
+      --cream: #f5f3f1;
+      --taupe: #d6cec4;
+      --white: #ffffff;
+
+      --red: #7f2a2a;
+      --red-soft: #a04a4a;
+
+      --text-main: #2b2b2b;
+      --text-muted: #5f5f5f;
+
+      --shadow: 0 16px 36px rgba(0,0,0,0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      background: var(--cream);
+      color: var(--text-main);
+      line-height: 1.65;
+    }
+
+    header {
+      background: var(--white);
+      padding: 3.5rem 2rem 3rem;
+      text-align: center;
+      border-bottom: 1px solid var(--taupe);
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 1.4rem;
+    }
+
+    .flower-img {
+      width: 120px;
+      opacity: 0.85;
+      margin: 0.5rem auto 1.8rem;
+      display: block;
+    }
+
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--taupe);
+      margin-bottom: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2.2rem;
+      margin-top: 1.4rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 1.05rem;
+      color: var(--red);
+      font-weight: bold;
+      letter-spacing: 0.04em;
+    }
+
+    nav a:hover {
+      color: var(--red-soft);
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 3.5rem auto;
+      padding: 3rem;
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    section h2 {
+      font-size: 1.75rem;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.6rem;
+      border-bottom: 2px solid var(--taupe);
+      padding-bottom: 0.6rem;
+    }
+
+    section p {
+      max-width: 740px;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.6rem;
+      margin-top: 2.8rem;
+    }
+
+    .project-card {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 1.9rem;
+      transition: transform 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--red-soft);
+      margin-bottom: 0.4rem;
+    }
+
+    .project-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .project-card p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    .project-card a {
+      color: var(--red);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .project-card a:hover {
+      color: var(--red-soft);
+      text-decoration: underline;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2.2rem;
+      margin-top: 2.2rem;
+    }
+
+    .skill-box {
+      background: var(--cream);
+      border-radius: 14px;
+      padding: 1.8rem;
+    }
+
+    .skill-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+      color: var(--red);
+    }
+
+    footer {
+      text-align: center;
+      padding: 3.2rem 2rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1 class="name">Gillian Elizabeth Young</h1>
-        <img src="AdobeStock_871456539.png" alt="Flower" class="flower-img">
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#goals">Goals</a></li>
-                <li><a href="#favorites">Favorites</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div class="layout">
-        <!-- Main Content -->
-        <main class="content">
-            <section id="about-me" class="section">
-                <h2>About Me</h2>
-                <p>Hi, I'm <strong>Gillian Elizabeth Young</strong>, a dedicated student currently studying <strong>Global Business and Digital Arts</strong> with an Economics minor at the University of Waterloo. My interests lie both in business innovation and digital design, and I am actively exploring how I'd like to merge these fields in real-world applications.</p>
-                <p>I am excited to continue to learn how I can bring a blend of creativity and strategic thinking into everything I do. For more information, check out my program at the 
-              <a href="https://uwaterloo.ca/stratford-school-of-interaction-design-and-business/" target="_blank">University of Waterloo Stratford School of Interaction Design and Business</a>.</p>
-             <span class="cursive">GY</span>
-              <!-- Code copied from: [https://uwaterloo.ca/stratford-school-of-interaction-design-and-business/]
-              Author: [University of Waterloo]
-              Name: [Stratford School of Interaction Design and Business]
-              Description: [School Website for GBDA]
-              Date retrieved: [2024-12-10] -->
-                <img src="thumbnail_View recent photos.jpg" alt="Gillian Young pfp" class="profile-img">
-            </section>
+<header>
+  <h1>Gillian Elizabeth Young</h1>
 
-            <section id="hobbies" class="section">
-                <h2>My Hobbies</h2>
-                <div class="hobby">
-                    <img src="AdobeStock_344306496 (1).jpeg" alt="Sewing">
-                    <div class="hobby-text">
-                        <h3>Sewing</h3>
-                        <p>I’ve recently picked up sewing which has been a great outlet for me. I love making simple clothing (like tank tops and skirts) along with accessories that reflect my style, and it gives me a sense of peace and creative freedom.</p>
-                    </div>
-                </div>
-                <div class="hobby">
-                    <img src="AdobeStock_95318946.jpeg" alt="Guitar">
-                    <div class="hobby-text">
-                        <h3>Guitar</h3>
-                        <p>Playing guitar allows me to relax and express myself musically. I enjoy playing around with different styles of music and learning new songs.</p>
-                    </div>
-                </div>
-                <div class="hobby">
-                    <img src="AdobeStock_642180880.jpeg" alt="Painting">
-                    <div class="hobby-text">
-                        <h3>Painting</h3>
-                        <p>I enjoy working with different mediums such as oil paint, watercolor, and acrylics. My favorite subjects are moody cityscapes with soft palettes and pops of color, as well as portraits, which I am working to improve.</p>
-                    </div>
-                </div>
-                <div class="hobby">
-                    <img src="AdobeStock_813073024.jpeg" alt="Interior Design">
-                    <div class="hobby-text">
-                        <h3>Interior Design</h3>
-                        <p>Helping friends and family design their rooms (as well as my own), is something I find incredibly satisfying. I love finding new ways to look at and transform spaces.</p>
-                    </div>
-                </div>
-            </section>
+  <img src="AdobeStock_871456539.png" alt="Floral illustration" class="flower-img">
+  <img src="thumbnail_View recent photos (1).jpg" alt="Gillian Young" class="profile-img">
 
-            <section id="goals" class="section">
-                <h2>Goals</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Short-Term Goals</th>
-                            <th>Long-Term Goals</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Improve my cooking skills</td>
-                            <td>Run a marathon</td>
-                        </tr>
-                        <tr>
-                            <td>Read more books</td>
-                            <td>Enhance my writing skills</td>
-                        </tr>
-                        <tr>
-                            <td>Gain experience as a barista</td>
-                            <td>Travel more places</td>
-                        </tr>
-                        <tr>
-                            <td>Advance my woodworking abilities</td>
-                            <td>Learn a new language</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <img src="AdobeStock_1072576657 (1).jpeg" alt="Cooking" class="profile-img">
-                <img src="AdobeStock_987488005.jpeg" alt="Writing" class="profile-img">
-                <img src="AdobeStock_258749681.jpeg" alt="Running" class="profile-img">
-                <img src="AdobeStock_384398051.jpeg" alt="Reading" class="profile-img">
-                <img src="AdobeStock_1017639669 (1).jpeg" alt="Travel" class="profile-img">
-            </section>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-            <section id="favorites" class="section">
-                <h2>Favorites</h2>
-                <ul>
-                    <li><strong>Animal:</strong> Fox</li>
-                    <li><strong>Food:</strong> Shrimp Alfredo Pasta</li>
-                    <li><strong>Color:</strong> Light Blue</li>
-                    <li><strong>Activities:</strong> Running, Hiking, Mountain Biking, Rock Climbing, Stargazing</li>
-                    <li><strong>Music Genres:</strong> Alt Rock, Indie, Classic Hip-hop</li>
-                    <li><strong>Season:</strong> Fall</li>
-                </ul>
-                <img src="AdobeStock_987562350 (1).jpeg" alt="Hiking"> 
-                <img src="AdobeStock_988874668.jpeg" alt="Records"> 
-            </section>
-            <section id="contact" class="section">
-                <h2>Contact</h2>
-                <p>To get in touch, email me at <a href="mailto:g6young@uwaterloo.ca">g6young@uwaterloo.ca</a>.</p>
-            </section>
+<section id="about">
+  <h2>About</h2>
+  <p>
+    I am a University of Waterloo student studying Global Business and Digital Arts
+    with a minor in Economics. My work focuses on visual communication, branding,
+    and digital experiences that balance creativity with structure and intention.
+  </p>
+  <p>
+    I am particularly interested in how design can clarify complex ideas and create
+    approachable, user centered systems. My background allows me to think both
+    visually and strategically, considering how design decisions support broader
+    business and communication goals.
+  </p>
+  <p>
+    Across my projects, I prioritize thoughtful typography, cohesive visual systems,
+    and restrained color palettes to create work that feels polished, functional,
+    and adaptable across platforms.
+  </p>
+  
+   <p>
+    Attending the Blend Conference in Stratford in 2024 reinforced my interest in
+    design as a tool for meaningful impact. I aim to contribute to projects that
+    prioritize accessibility, community improvement, and thoughtful interaction,
+    creating work that supports real people and real needs.
+  </p>
+</section>
 
-            <footer class="footer">
-                <p>&copy; 2024 Gillian Elizabeth Young | GBDA 228</p>
-            </footer>
-        </main>
+<section id="projects">
+  <h2>Selected Projects</h2>
+
+  <div class="project-grid">
+
+    <div class="project-card">
+      <img src="Screenshot 2024-10-27 191223.png">
+      <img src="Screenshot 2024-10-27 201744.png">
+      <div class="project-label">Visual Identity</div>
+      <h3>Sally Hansen Rebrand Concept</h3>
+      <p>
+        A conceptual rebrand focused on refining Sally Hansen’s visual identity to
+        feel more cohesive, contemporary, and recognizable. The project explored
+        logo design, color systems, and packaging concepts while maintaining the
+        brand’s established sense of confidence and accessibility.
+      </p>
     </div>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Georgia', serif;
-            background-color: #f5f3f1;
-            color: #2b2b2b;
-            line-height: 1.6;
-        }
+    <div class="project-card">
+      <img src="Screenshot 2025-12-29 193924.png">
+      <img src="Screenshot 2025-12-29 193810.png">
+      <img src="Screenshot 2025-12-29 192921.png">
+      <div class="project-label">Digital Experience</div>
+      <h3>Rogers Design Jam</h3>
+      <p>
+        A collaborative design sprint exploring how digital rewards and exclusive
+        experiences could be presented more clearly across web and mobile platforms.
+        The project emphasized hierarchy, usability, and storytelling through
+        interface design and prototyping. Awarded runner up. (To view properly must be set to correct device format).
+      </p>
+      <p>
+        <a href="https://www.figma.com/proto/1MHqEuc68cO1bzX7ZoUCX2/Design-Jam-Rogers?node-id=0-1&t=cInnxQ6LVNJr6JUb-1" target="_blank">
+          View interactive prototype
+        </a>
+      </p>
+    </div>
 
-        header {
-            background-color: #fdf5e6;
-            padding: 25px 0;
-            text-align: center;
-        }
+    <div class="project-card">
+      <img src="thumbnail_View recent photos (3).jpg">
+      <img src="Screenshot 2025-10-22 192612.png">
+      <img src="Screenshot 2025-11-19 210942.png">
+      <img src="Screenshot 2025-12-30 140354.png">
+      <div class="project-label">Product Concept</div>
+      <h3>ThriftLink</h3>
+      <p>
+        A service based platform developed in an entrepreneurship course to support
+        local thrift stores through centralized online retail. The concept focused
+        on increasing accessibility for small businesses while offering users a
+        curated, community driven shopping experience.
+      </p>
+    </div>
 
-        .name {
-            font-size: 2.5em;
-            font-family: 'Baskerville', serif;
-            text-transform: uppercase;
-            color: #8b0000; 
-            margin: 0;
-        }
+    <div class="project-card">
+      <img src="Screenshot 2025-03-25 222626.png">
+      <img src="Screenshot 2025-03-24 194054.png">
+      <img src="Screenshot 2025-03-24 190545.png">
+      <div class="project-label">Print Design</div>
+      <h3>Poster and Flyer Series</h3>
+      <p>
+        A collection of print designs focused on spacing, and muted
+        colour palettes using simple lines via the curvature tool on Adobe Illustrator.
+      </p>
+    </div>
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 10px 0 0;
-        }
+    <div class="project-card">
+      <img src="Screenshot 2024-11-22 161230.jpg">
+      <img src="Screenshot 2024-11-23 175828.png">
+      <img src="Screenshot 2024-11-23 174149.png">
+      <div class="project-label">Ecommerce Concept</div>
+      <h3>Home Camera Security Shopping Website</h3>
+      <p>
+        An ecommerce website concept designed to help users research, compare, and
+        purchase home camera security systems. The interface prioritized clarity,
+        trust, and ease of navigation to support informed decision making. (Click on secure solotions app from homescreen).
+      </p>
+      <p>
+        <a href="https://www.figma.com/proto/8R9Iqppu6czlCOR8zWYd1p/Milestone-3-Group-9?node-id=0-1&t=rxTfvPNVG78U3bak-1" target="_blank">
+          View interactive prototype
+        </a>
+      </p>
+    </div>
 
-        nav ul li {
-            margin: 0 25px;
-        }
+    <div class="project-card">
+      <img src="Screenshot 2025-03-26 012854.png">
+      <div class="project-label">Logo Design</div>
+      <h3>Personality Based Logo Concept</h3>
+      <p>
+      Developed as part of a concept-driven academic project, this logo was designed for a peer using their written self-reflection as the primary brief. Visual elements translate personal traits into an abstract identity through form, tone, and structure.
+      </p>
+    </div>
 
-        nav ul li a {
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            color: #8b0000;
-            transition: color 0.3s ease;
-        }
+  </div>
+</section>
 
-        nav ul li a:hover {
-            color: #ffd700;
-        }
+<section id="skills">
+  <h2>Skills</h2>
 
-        .content {
-            padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+  <div class="skills-grid">
+    <div class="skill-box">
+      <h3>Design Tools</h3>
+      <p>Adobe Photoshop, Illustrator, InDesign, Figma, Premiere Pro, Html </p>
+    </div>
 
-        .section {
-            margin-bottom: 40px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 15px;
-        }
+    <div class="skill-box">
+      <h3>Visual Communication</h3>
+      <p>Branding systems, presentation design, visual storytelling, digital content creation</p>
+    </div>
 
-        .section h2 {
-            color: #8b0000;
-            border-bottom: 2px solid #8b0000;
-            padding-bottom: 8px;
-            margin-bottom: 25px;
-            font-size: 1.8em;
-            text-transform: uppercase;
-        }
+    <div class="skill-box">
+      <h3>Workflow</h3>
+      <p>File organization, collaborative tools, digital asset management, short/long form content creation</p>
+    </div>
+  </div>
+</section>
 
-        .section p, .section ul {
-            font-size: 1.1em;
-            margin-bottom: 25px;
-        }
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    Email: gillian.4057@gmail.com<br>
+    Phone: 519-404-0863
+  </p>
 
-        .hobby {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+  <a href="Gillian_Young_Resume_2025_.pdf" class="resume-link" target="_blank">
+    View Resume (PDF)
+  </a>
+  
+</section>
 
-        .hobby img {
-            max-width: 150px;
-            margin-right: 25px;
-            border-radius: 8px;
-        }
+<footer>
+  © 2025 Gillian Elizabeth Young
+</footer>
 
-        .hobby-text {
-            flex: 1;
-        }
-
-        .flower-img {
-            max-width: 120px; 
-            margin: 25px 0;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .profile-img {
-            max-width: 200px;
-            border-radius: 50%;
-            margin-top: 25px;;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-            background-color: #8b0000;
-            color: #fff;
-            font-size: 1em;
-        }
-
-        #favorites img {
-            max-width: 160px;
-            margin-top: 25px;
-            border-radius: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-      
-      .cursive {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 3em
-}
-    </style>
 </body>
 </html>
